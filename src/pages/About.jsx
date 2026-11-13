@@ -94,7 +94,6 @@ export default function About() {
                 )}
                 <h3>{person.name}</h3>
                 <p>{person.role}</p>
-                {person.egg && <p className="team-egg">♥ {person.egg}</p>}
               </div>
             ))}
           </div>
