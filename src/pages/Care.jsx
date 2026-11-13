@@ -16,7 +16,10 @@ export default function Care() {
   const [show, setShow] = useState('All')
   const [checked, setChecked] = useLocalStorage('checklist', [])
 
-  const tips = careTips.filter((tip) => show === 'All' || tip.for === show || tip.for === 'Both')
+  // Tips just for the chosen pet come first, then the tips for both.
+  const tips = careTips
+    .filter((tip) => show === 'All' || tip.for === show || tip.for === 'Both')
+    .sort((a, b) => (show === 'All' ? 0 : (a.for === 'Both') - (b.for === 'Both')))
   const items = tips.map((tip, i) => ({
     id: tip.id,
     title: (
@@ -30,7 +33,7 @@ export default function Care() {
     ),
     content: (
       <>
-      <img className="tip-img" src={img(`care/${tip.id}.jpg`)} alt="" loading="lazy" />
+      <img className="tip-img" src={img(`${tip.photo[show] || tip.photo.All}.jpg`)} alt="" loading="lazy" />
       <ul className="tick-list">
         {tip.points.map((point) => (
           <li key={point}>{point}</li>
