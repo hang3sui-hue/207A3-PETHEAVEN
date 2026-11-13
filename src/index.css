@@ -2776,3 +2776,92 @@ h4 { font-family: var(--font-body); font-weight: 700; letter-spacing: 0.08em; fo
 .brand span { font-family: var(--font-head); text-transform: uppercase; font-size: 1.5rem; letter-spacing: 0.02em; }
 .brand b { color: var(--primary); font-weight: 400; }
 .theme-toggle:hover { transform: none; background: var(--ink); color: var(--bg); }
+
+/* =====================================================
+   WARM LAYER – keeps the bold type, but softer and kinder for a pet charity:
+   rounded corners, thinner lines, soft shadows and a pink "love" accent.
+   ===================================================== */
+:root {
+  --love: #e2879a;
+  --love-soft: #fbe3e7;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 8px 24px rgba(60, 50, 30, 0.08);
+  --line: #d8ceb9;
+}
+[data-theme='dark'] { --love: #f0a2b2; --love-soft: #3a2328; --line: #3a3a34; }
+
+.btn { border-radius: 12px; border-width: 1.5px; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 18px rgba(61, 122, 55, 0.25) !important; }
+.btn-outline { border-color: var(--ink); }
+.theme-toggle { border-radius: 10px !important; border-width: 1.5px !important; }
+.species-tabs { border-radius: 12px; overflow: hidden; border-width: 1.5px; }
+
+.pet-card, .card, .feature, .quote, .path-card, .form-card, .panel {
+  border: 1.5px solid var(--line) !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+  overflow: hidden;
+}
+.pet-card:hover { transform: translateY(-5px); box-shadow: 0 16px 34px rgba(60, 50, 30, 0.14) !important; }
+.pet-card-art { border-bottom: 1.5px solid var(--line); }
+.status-badge { border-radius: 8px; background: var(--surface); color: var(--primary-dark); }
+.tags li { border-radius: 8px; border-color: var(--line); color: var(--soft); }
+.heart { border-radius: 50%; border: 0; color: var(--love); }
+.heart.saved { color: var(--love); }
+.sticker { border-radius: 8px; border-width: 1.5px; }
+.sticker-new { background: var(--love); color: #fff; border-color: var(--love); }
+.sticker-green { border-color: var(--primary); }
+
+.site-header, .street-hero, .street-hero-top, .page-header, .split, .ticker { border-color: var(--line) !important; }
+.street-hero-top { border-bottom-width: 1.5px; }
+.wordmark-dot { color: var(--love); font-size: 0.55em; vertical-align: 0.6em; margin-left: 0.05em; }
+.ticker { background: var(--primary); }
+.ticker span { color: #fff; }
+.ticker b { color: var(--love-soft); }
+.split { border-width: 1.5px 0; }
+.split-adopt { border-right: 1.5px solid var(--line); }
+.split-release { background: var(--love-soft); }
+[data-theme='dark'] .split-release { background: var(--surface); }
+.split-panel:hover { background: var(--primary-dark); color: #fff; }
+.street-quote blockquote::before { content: '♥ '; color: var(--love); }
+
+/* Photo placeholder (until real photos are added) */
+.photo-slot {
+  width: 100%;
+  height: 100%;
+  min-height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  text-align: center;
+  padding: 1rem;
+  background:
+    repeating-linear-gradient(135deg, transparent 0 14px, rgba(226, 135, 154, 0.07) 14px 28px),
+    var(--love-soft);
+  border: 2px dashed var(--love);
+  border-radius: inherit;
+  color: var(--ink);
+  transition: transform 0.6s var(--ease);
+}
+.pet-card-art .photo-slot { border-radius: 0; border-width: 0 0 2px; }
+.pet-card:hover .photo-slot { transform: scale(1.02); }
+.photo-slot-cover { min-height: 320px; }
+.photo-slot-heart { color: var(--love); font-size: 1.6rem; line-height: 1; }
+.photo-slot-name { font-family: var(--font-head); text-transform: uppercase; font-size: 2rem; line-height: 1; }
+.photo-slot-note { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--soft); }
+.picked-pet .photo-slot { width: 84px; height: 84px; min-height: 0; padding: 0.3rem; border-radius: 12px; }
+.picked-pet .photo-slot-name { font-size: 1rem; }
+.picked-pet .photo-slot-note, .picked-pet .photo-slot-heart { display: none; }
+.auth-pets .photo-slot { aspect-ratio: 1; border-radius: 50%; animation: float 6s ease-in-out infinite; }
+.auth-pets .photo-slot:last-child { margin-top: 2.5rem; animation-delay: 1s; }
+.auth-pets .photo-slot-name { font-size: 1.4rem; }
+.auth-pets .photo-slot-note { display: none; }
+:root { --shadow-lg: 0 18px 40px rgba(60, 50, 30, 0.14); }
+.wordmark-dot { font-size: 0.32em; vertical-align: 1.4em; }
+.auth-pets { justify-items: center; }
+.auth-pets .photo-slot { width: 100%; max-width: 170px; min-height: 0; }
+.auth-side p { font-family: var(--font-body); font-weight: 600; font-size: 1.05rem; }
+.auth-pets .photo-slot { height: auto; aspect-ratio: 1 / 1; } .auth-pets { margin-bottom: 3rem; }

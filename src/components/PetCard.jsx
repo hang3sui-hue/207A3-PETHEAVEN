@@ -14,10 +14,10 @@ export default function PetCard({ pet, onOpen, look, isNew }) {
         <div className="pet-card-art">
           <PetArt species={pet.species} art={pet.art} name={pet.name} />
           <span className={`status-badge ${pet.status === 'Reserved' ? 'reserved' : ''}`}>{pet.status}</span>
-          {isNew && <span className="sticker sticker-new">New in</span>}
+          {isNew && <span className="sticker sticker-new">Just arrived</span>}
         </div>
         <div className="pet-card-body">
-          {look && <p className="look-no">Look {String(look).padStart(2, '0')}</p>}
+          {look && <p className="look-no">No. {String(look).padStart(2, '0')} · waiting for a home</p>}
           <h3>{pet.name}</h3>
           <p className="pet-meta">
             {pet.gender} · {formatAge(pet.age)} · {pet.size}

@@ -14,7 +14,7 @@ const lookbook = [...available].sort((a, b) => b.arrived.localeCompare(a.arrived
 const newestId = lookbook[0]?.id
 const quote = reviews[0]
 
-const TICKER = ['Adopt, don’t shop', 'Rescue club Singapore', 'No pet left behind', 'Est. 2015', 'Free membership']
+const TICKER = ['Adopt, don’t shop', 'Every pet deserves a home', 'No pet left behind', 'Loved since 2015', 'Kindness is free']
 
 export default function Home() {
   usePageTitle('')
@@ -25,22 +25,22 @@ export default function Home() {
       <section className="street-hero">
         <div className="container">
           <div className="street-hero-top">
-            <span>Rescue club / Singapore</span>
-            <span>Drop 11 / {available.length} looks available</span>
+            <span>Cat & dog rescue / Singapore</span>
+            <span>{available.length} pets are waiting for a family</span>
           </div>
           <h1 className="wordmark">
             Pet
             <br />
-            Heaven<span className="wordmark-dot">.</span>
+            Heaven<span className="wordmark-dot">♥</span>
           </h1>
           <div className="street-hero-bottom">
             <p>
-              Abandoned cats and dogs, cared for until they go home. Pick your new best friend, or hand yours over when life
-              changes. No judgement.
+              We look after abandoned cats and dogs with love, until each one finds a family of its own. Come meet them, or let us
+              help when you can no longer care for yours. No judgement, only kindness.
             </p>
             <div className="street-actions">
               <Link to="/pets" className="btn btn-primary btn-lg">
-                View the lookbook
+                Meet our pets
               </Link>
               <Link to="/release" className="btn btn-outline btn-lg">
                 Release a pet
@@ -54,7 +54,7 @@ export default function Home() {
         <div className="ticker-track">
           {[...TICKER, ...TICKER, ...TICKER].map((t, i) => (
             <span key={i}>
-              {t} <b>✦</b>
+              {t} <b>♥</b>
             </span>
           ))}
         </div>
@@ -64,15 +64,15 @@ export default function Home() {
         <div className="container">
           <div className="look-head">
             <h2>
-              FW26
+              Waiting
               <br />
-              Lookbook
+              for you
             </h2>
             <p>
-              Every look is a real rescue, checked by our vet and ready to go home. Tap a look to see the full story.
+              Each of them was once left behind. Our vet has checked every one, and they are ready to love again. Tap a pet to read their story.
             </p>
             <Link to="/pets" className="link-arrow">
-              All {pets.length} looks →
+              Meet all {pets.length} pets →
             </Link>
           </div>
           <div className="pet-grid lookbook">
@@ -86,21 +86,21 @@ export default function Home() {
       <section className="split">
         <Link to="/pets" className="split-panel split-adopt">
           <span className="split-label">01 / Adopt</span>
-          <strong>Take one home.</strong>
-          <span className="split-text">Join free, pick a look, send the form. We call you for a chat.</span>
+          <strong>Give a pet a home.</strong>
+          <span className="split-text">Join for free, choose a pet and send the form. Our staff will call you for a friendly chat.</span>
           <span className="split-go">Find your pet →</span>
         </Link>
         <Link to="/release" className="split-panel split-release">
           <span className="split-label">02 / Release</span>
-          <strong>Can’t keep yours?</strong>
-          <span className="split-text">Tell us about your pet. We find the safest next step together.</span>
+          <strong>Can’t keep your pet?</strong>
+          <span className="split-text">Life changes. Tell us about your pet and we will find the safest, kindest next step together.</span>
           <span className="split-go">Release form →</span>
         </Link>
       </section>
 
       <section className="section">
         <div className="container street-quote">
-          <span className="sticker sticker-green">Word on the street</span>
+          <span className="sticker sticker-green">Happy tails</span>
           <blockquote>“{quote.text}”</blockquote>
           <p className="street-quote-by">
             {quote.name} / adopted {quote.pet}
