@@ -92,19 +92,27 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="split">
-        <Link to="/pets" className="split-panel split-adopt">
-          <span className="split-label">01 / Adopt</span>
-          <strong>Give a pet a home.</strong>
-          <span className="split-text">Join for free, choose a pet and send the form. Our staff will call you for a friendly chat.</span>
-          <span className="split-go">Find your pet →</span>
-        </Link>
-        <Link to="/release" className="split-panel split-release">
-          <span className="split-label">02 / Release</span>
-          <strong>Can’t keep your pet?</strong>
-          <span className="split-text">Life changes. Tell us about your pet and we will find the safest, kindest next step together.</span>
-          <span className="split-go">Release form →</span>
-        </Link>
+      <section className="section section-tight">
+        <div className="container choice-grid">
+          <Link to="/pets" className="choice choice-adopt">
+            <img src={img('pages/adopt.jpg')} alt="A family meeting a dog at the shelter" loading="lazy" />
+            <div className="choice-body">
+              <span className="choice-tag">♥ I want to adopt</span>
+              <h3>Give a pet a home</h3>
+              <p>Join for free, choose a pet and send the adoption form. Our staff will call you for a friendly chat.</p>
+              <span className="btn btn-primary">Find your pet →</span>
+            </div>
+          </Link>
+          <Link to="/release" className="choice choice-release">
+            <img src={img('pages/release.jpg')} alt="An owner gently handing a cat to a shelter staff member" loading="lazy" />
+            <div className="choice-body">
+              <span className="choice-tag">I need to release my pet</span>
+              <h3>Can’t keep your pet?</h3>
+              <p>Life changes. Tell us about your pet and we will find the safest, kindest next step together. No judgement.</p>
+              <span className="btn btn-green">Open release form →</span>
+            </div>
+          </Link>
+        </div>
       </section>
 
       <section className="section">
