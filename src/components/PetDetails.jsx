@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { formatAge, getAgeGroup } from '../data/pets'
+import { formatAge, getAgeGroup, statusLabel } from '../data/pets'
 import Modal from './Modal'
 import PetArt from './PetArt'
 import { useFavourites } from '../hooks/useAppContext'
@@ -30,7 +30,7 @@ export default function PetDetails({ pet, onClose }) {
           <PetArt species={pet.species} art={pet.art} name={pet.name} cover />
         </div>
         <div className="pet-details-info">
-          <p className="eyebrow">{pet.species} · {pet.status}</p>
+          <p className="eyebrow">{pet.species} · {statusLabel(pet.status)}</p>
           <h2>Hi, I'm {pet.name}!</h2>
           <p>{pet.story}</p>
 
@@ -74,7 +74,7 @@ export default function PetDetails({ pet, onClose }) {
               </Link>
             ) : (
               <span className="btn btn-disabled" aria-disabled="true">
-                Reserved – meeting a family
+                Meeting a family right now
               </span>
             )}
             <button className="btn btn-outline" onClick={() => toggleFavourite(pet)}>

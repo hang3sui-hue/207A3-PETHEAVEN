@@ -3130,3 +3130,4 @@ h4 { font-family: var(--font-head); letter-spacing: 0; font-size: 1.05rem; }
 .team-egg { font-size: 0.85rem; color: var(--primary-dark); font-style: italic; margin-top: 0.2rem; }
 @media (max-width: 900px) { .team-grid { grid-template-columns: repeat(2, 1fr) !important; } }
 .team-avatar.team-photo { width: 120px !important; height: 120px !important; border-radius: 50% !important; margin: 0 auto 0.8rem; }
+.status-badge { color: var(--primary-dark); } .status-badge.reserved { color: #a86a1d; }

@@ -238,4 +238,9 @@ export function findPet(id) {
   return pets.find((pet) => pet.id === Number(id))
 }
 
+// Warm wording shown to visitors (the data keeps 'Available' / 'Reserved' for the logic).
+export function statusLabel(status) {
+  return { Available: 'Waiting for you', Reserved: 'Meeting a family' }[status] || status
+}
+
 export default pets
