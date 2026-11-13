@@ -43,6 +43,8 @@ export const TEAM = [
   { name: 'Daniel Lim', role: 'Adoption Manager', colour: '#2a6f6a' },
   { name: 'Priya Nair', role: 'Shelter Vet', colour: '#81b29a' },
   { name: 'Marcus Wong', role: 'Volunteer Lead', colour: '#d9a441' },
+  // A little easter egg from the developer ♥ (photo: public/images/team/nanami-sato.jpg)
+  { name: 'Nanami Sato', role: 'Animal Carer', colour: '#e0738c', photo: false, egg: 'Hugs every pet good night before going home.' },
 ]
 
 export const FAQS = [

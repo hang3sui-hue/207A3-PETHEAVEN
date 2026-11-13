@@ -85,9 +85,16 @@ export default function About() {
           <div className="team-grid">
             {TEAM.map((person) => (
               <div key={person.name} className="team-card">
-                <img className="team-photo" src={teamPhoto(person.name)} alt={`Illustration of ${person.name}`} loading="lazy" />
+                {person.photo === false ? (
+                  <span className="team-avatar team-photo" style={{ background: person.colour }} aria-hidden="true">
+                    {person.name[0]}
+                  </span>
+                ) : (
+                  <img className="team-photo" src={teamPhoto(person.name)} alt={`Illustration of ${person.name}`} loading="lazy" />
+                )}
                 <h3>{person.name}</h3>
                 <p>{person.role}</p>
+                {person.egg && <p className="team-egg">♥ {person.egg}</p>}
               </div>
             ))}
           </div>
