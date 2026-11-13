@@ -52,4 +52,26 @@ describe('Pet Heaven SPA – integration tests', () => {
     expect(document.querySelectorAll('.field-error').length).toBeGreaterThan(3)
     expect(screen.getByRole('button', { name: /send release request/i })).toBeInTheDocument()
   })
+
+  it('6. sign-up needs a real email, then the new member can log in', async () => {
+    const user = userEvent.setup()
+    renderApp('/signup')
+    const email = screen.getByLabelText(/^email/i)
+    expect(email).toHaveAttribute('type', 'email')
+    await user.type(screen.getByLabelText(/full name/i), 'Jinhang Zhang')
+    await user.type(email, 'jinhang')
+    await user.type(screen.getByLabelText(/mobile number/i), '91234567')
+    await user.type(screen.getByLabelText(/^password/i), 'petheaven1')
+    await user.type(screen.getByLabelText(/confirm password/i), 'petheaven1')
+    await user.click(screen.getByRole('checkbox', { name: /treat all animals kindly/i }))
+    await user.click(screen.getByRole('button', { name: /create my account/i }))
+    expect(await screen.findByText(/valid email/i)).toBeInTheDocument()
+
+    await user.clear(email)
+    await user.type(email, 'jinhang@example.com')
+    await user.click(screen.getByRole('button', { name: /create my account/i }))
+    // Signed up and logged in: the app moves to the pets page and the login button is gone
+    expect(await screen.findByText(/Showing/)).toBeInTheDocument()
+    expect(screen.queryByRole('link', { name: /log in \/ join/i })).not.toBeInTheDocument()
+  })
 })
