@@ -52,7 +52,7 @@ export default function Footer() {
       <div className="container footer-bottom">
         <span>© 2026 Pet Heaven Society (fictional charity for ISIT207 Assignment 3)</span>
         <span>
-          <Link to="/staff">Staff portal</Link> · Made with React ❤ for pets
+          <Link to="/staff">Staff portal</Link> · Made with React for pets
         </span>
       </div>
       <p className="JHyper">JHyper</p>

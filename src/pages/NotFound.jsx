@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <section className="section">
       <div className="container narrow empty-state">
-        <p className="empty-icon" aria-hidden="true">🐾</p>
+        <p className="empty-icon" aria-hidden="true">404</p>
         <h1>Oops! This page ran away.</h1>
         <p>We could not find the page you were looking for.</p>
         <Link to="/" className="btn btn-primary">

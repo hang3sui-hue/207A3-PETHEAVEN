@@ -15,7 +15,7 @@ export function FavouritesProvider({ children }) {
       showToast(`${pet.name} removed from favourites`, 'info')
     } else {
       setFavourites([...favourites, pet.id])
-      showToast(`${pet.name} saved to favourites ❤`)
+      showToast(`${pet.name} saved to favourites`)
     }
   }
 

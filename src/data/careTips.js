@@ -5,7 +5,6 @@ const careTips = [
   {
     id: 'first-days',
     for: 'Both',
-    icon: '🏡',
     title: 'The first few days at home',
     points: [
       'Prepare one quiet room with a bed, water, food and (for cats) a litter box.',
@@ -17,7 +16,6 @@ const careTips = [
   {
     id: 'food',
     for: 'Both',
-    icon: '🥣',
     title: 'Food and water',
     points: [
       'Keep the same food the shelter used for the first week, then change slowly over 7 days.',
@@ -29,7 +27,6 @@ const careTips = [
   {
     id: 'dog-walks',
     for: 'Dog',
-    icon: '🦮',
     title: 'Walks and exercise for dogs',
     points: [
       'Most adult dogs need two walks a day, 20 to 40 minutes each.',
@@ -41,7 +38,6 @@ const careTips = [
   {
     id: 'dog-training',
     for: 'Dog',
-    icon: '🎾',
     title: 'Kind training for dogs',
     points: [
       'Reward good behaviour straight away with a treat or praise.',
@@ -53,7 +49,6 @@ const careTips = [
   {
     id: 'cat-litter',
     for: 'Cat',
-    icon: '🧼',
     title: 'Litter box basics for cats',
     points: [
       'Have one box per cat, plus one extra.',
@@ -65,7 +60,6 @@ const careTips = [
   {
     id: 'cat-safety',
     for: 'Cat',
-    icon: '🪟',
     title: 'Keeping cats safe in a flat',
     points: [
       'Install mesh on all windows and the balcony. Falls from high floors are common.',
@@ -77,7 +71,6 @@ const careTips = [
   {
     id: 'health',
     for: 'Both',
-    icon: '💉',
     title: 'Health checks',
     points: [
       'Visit the vet once a year (twice a year for seniors).',

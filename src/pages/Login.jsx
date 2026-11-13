@@ -29,7 +29,7 @@ export default function Login() {
       setLoginError('The email or password is wrong. Please try again.')
       return
     }
-    showToast('Welcome back! 🐾')
+    showToast('Welcome back.')
     // Go back to the page that asked for login (e.g. the adoption form), or home.
     navigate(location.state?.from || '/', { replace: true })
   }

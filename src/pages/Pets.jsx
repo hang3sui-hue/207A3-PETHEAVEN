@@ -65,7 +65,7 @@ export default function Pets() {
                   aria-pressed={filters.species === s}
                   onClick={() => setFilters({ ...filters, species: s })}
                 >
-                  {s === 'All' ? '🐾 All pets' : s === 'Dog' ? '🐶 Dogs' : '🐱 Cats'}
+                  {s === 'All' ? 'All' : s === 'Dog' ? 'Dogs' : 'Cats'}
                 </button>
               ))}
             </div>
@@ -139,7 +139,7 @@ export default function Pets() {
             </div>
           ) : (
             <div className="empty-state">
-              <p className="empty-icon" aria-hidden="true">🔍</p>
+              <p className="empty-icon" aria-hidden="true">0</p>
               <h3>No pets match your search</h3>
               <p>Try removing a filter. New pets arrive every week!</p>
               <button className="btn btn-primary" onClick={() => setFilters(EMPTY_FILTERS)}>

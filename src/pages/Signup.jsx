@@ -56,7 +56,7 @@ export default function Signup() {
     const { confirm: _confirm, terms: _terms, ...newUser } = values
     const problem = signup(newUser)
     if (problem) return setFormError(problem)
-    showToast(`Welcome to Pet Heaven, ${values.name.split(' ')[0]}! 🎉`)
+    showToast(`Welcome to Pet Heaven, ${values.name.split(' ')[0]}.`)
     navigate(location.state?.from || '/pets', { replace: true })
   }
 

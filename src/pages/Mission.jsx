@@ -5,10 +5,10 @@ import CountUp from '../components/CountUp'
 import PageHeader from '../components/PageHeader'
 
 const VALUES = [
-  { icon: '❤', title: 'Kindness', text: 'Every animal is treated with patience and respect, whatever its age or health.' },
-  { icon: '🔍', title: 'Honesty', text: 'We tell adopters the good and the hard parts about each pet, so matches last.' },
-  { icon: '🤝', title: 'No judgement', text: 'Owners who release a pet are helped, not blamed. Life can change suddenly.' },
-  { icon: '📚', title: 'Education', text: 'We teach the public how to care for pets, so fewer animals are abandoned.' },
+  { title: 'Kindness', text: 'Every animal is treated with patience and respect, whatever its age or health.' },
+  { title: 'Honesty', text: 'We tell adopters the good and the hard parts about each pet, so matches last.' },
+  { title: 'No judgement', text: 'Owners who release a pet are helped, not blamed. Life can change suddenly.' },
+  { title: 'Education', text: 'We teach the public how to care for pets, so fewer animals are abandoned.' },
 ]
 
 const WORK = [
@@ -58,10 +58,10 @@ export default function Mission() {
             </div>
           </div>
           <div className="feature-grid four">
-            {VALUES.map((v) => (
+            {VALUES.map((v, i) => (
               <div key={v.title} className="feature">
                 <span className="feature-icon" aria-hidden="true">
-                  {v.icon}
+                  {String(i + 1).padStart(2, '0')}
                 </span>
                 <h3>{v.title}</h3>
                 <p>{v.text}</p>

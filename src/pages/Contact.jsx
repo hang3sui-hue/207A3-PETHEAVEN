@@ -42,9 +42,9 @@ export default function Contact() {
         <div className="container contact-layout">
           <div className="contact-info">
             <div className="info-card">
-              <h3>📍 Address</h3>
+              <h3>Address</h3>
               <p>{SITE.address}</p>
-              <h3>📞 Phone</h3>
+              <h3>Phone</h3>
               <p>
                 <a href={`tel:${SITE.phone.replace(/\s/g, '')}`}>{SITE.phone}</a> (office)
                 <br />
@@ -53,11 +53,11 @@ export default function Contact() {
                 </a>{' '}
                 (WhatsApp)
               </p>
-              <h3>✉ Email</h3>
+              <h3>Email</h3>
               <p>
                 <a href={`mailto:${SITE.adminEmail}`}>{SITE.adminEmail}</a>
               </p>
-              <h3>🕒 Opening hours</h3>
+              <h3>Opening hours</h3>
               <table className="hours">
                 <tbody>
                   {SITE.hours.map((h) => (

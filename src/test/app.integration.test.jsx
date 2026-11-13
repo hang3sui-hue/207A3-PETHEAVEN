@@ -41,7 +41,7 @@ describe('Pet Heaven SPA – integration tests', () => {
     await user.clear(screen.getByLabelText(/^password/i))
     await user.type(screen.getByLabelText(/^password/i), '1234')
     await user.click(screen.getByRole('button', { name: /log in/i }))
-    expect(await screen.findByText(/welcome back! 🐾/i)).toBeInTheDocument()
+    expect(await screen.findByText(/^welcome back\.$/i)).toBeInTheDocument()
   })
 
   it('5. blocks the release form until required fields are filled', async () => {

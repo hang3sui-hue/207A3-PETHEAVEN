@@ -4,7 +4,7 @@ import { useFavourites } from '../hooks/useAppContext'
 
 // One pet in the list. Reused on the Home page and the Our Pets page.
 // "onOpen" is passed in by the parent, so the parent decides what happens on click.
-export default function PetCard({ pet, onOpen }) {
+export default function PetCard({ pet, onOpen, look, isNew }) {
   const { isFavourite, toggleFavourite } = useFavourites()
   const saved = isFavourite(pet.id)
 
@@ -14,11 +14,11 @@ export default function PetCard({ pet, onOpen }) {
         <div className="pet-card-art">
           <PetArt species={pet.species} art={pet.art} name={pet.name} />
           <span className={`status-badge ${pet.status === 'Reserved' ? 'reserved' : ''}`}>{pet.status}</span>
+          {isNew && <span className="sticker sticker-new">New in</span>}
         </div>
         <div className="pet-card-body">
-          <h3>
-            {pet.name} <span className="species-icon">{pet.species === 'Dog' ? '🐶' : '🐱'}</span>
-          </h3>
+          {look && <p className="look-no">Look {String(look).padStart(2, '0')}</p>}
+          <h3>{pet.name}</h3>
           <p className="pet-meta">
             {pet.gender} · {formatAge(pet.age)} · {pet.size}
           </p>

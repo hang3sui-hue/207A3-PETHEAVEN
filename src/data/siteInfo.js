@@ -30,12 +30,12 @@ export const ADOPTION_STEPS = [
 ]
 
 export const FACILITIES = [
-  { icon: '🏠', title: 'Indoor shelter', text: 'Air-conditioned rooms for 30 dogs and 40 cats, cleaned twice a day.' },
-  { icon: '🩺', title: 'Vet clinic', text: 'A part-time vet checks, vaccinates and sterilises every pet.' },
-  { icon: '🌳', title: 'Play garden', text: 'A fenced garden where dogs run and visitors can meet pets.' },
-  { icon: '🐱', title: 'Cat lounge', text: 'A quiet room with shelves and windows so shy cats can relax.' },
-  { icon: '🎓', title: 'Training room', text: 'Free weekend classes for new adopters and their pets.' },
-  { icon: '🚐', title: 'Rescue van', text: 'Our van picks up injured or abandoned pets across Singapore.' },
+  { title: 'Indoor shelter', text: 'Air-conditioned rooms for 30 dogs and 40 cats, cleaned twice a day.' },
+  { title: 'Vet clinic', text: 'A part-time vet checks, vaccinates and sterilises every pet.' },
+  { title: 'Play garden', text: 'A fenced garden where dogs run and visitors can meet pets.' },
+  { title: 'Cat lounge', text: 'A quiet room with shelves and windows so shy cats can relax.' },
+  { title: 'Training room', text: 'Free weekend classes for new adopters and their pets.' },
+  { title: 'Rescue van', text: 'Our van picks up injured or abandoned pets across Singapore.' },
 ]
 
 export const TEAM = [

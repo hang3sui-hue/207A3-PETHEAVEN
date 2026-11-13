@@ -30,7 +30,7 @@ export default function PetDetails({ pet, onClose }) {
           <PetArt species={pet.species} art={pet.art} name={pet.name} cover />
         </div>
         <div className="pet-details-info">
-          <p className="eyebrow">{pet.species === 'Dog' ? '🐶 Dog' : '🐱 Cat'} · {pet.status}</p>
+          <p className="eyebrow">{pet.species} · {pet.status}</p>
           <h2>Hi, I'm {pet.name}!</h2>
           <p>{pet.story}</p>
 

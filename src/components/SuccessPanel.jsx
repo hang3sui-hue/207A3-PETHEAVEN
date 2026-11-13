@@ -15,7 +15,7 @@ export default function SuccessPanel({ title, reference, children, mailto, actio
       <div className="success-actions">
         {mailto && (
           <a className="btn btn-primary" href={mailto}>
-            ✉ Email this form to the administrator
+            Email this form to the administrator
           </a>
         )}
         {actions}

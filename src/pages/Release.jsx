@@ -162,7 +162,7 @@ export default function Release() {
                       {['Dog', 'Cat'].map((opt) => (
                         <label key={opt} className={values.species === opt ? 'checked' : ''}>
                           <input type="radio" {...field('species')} id={undefined} value={opt} checked={values.species === opt} />
-                          {opt === 'Dog' ? '🐶 Dog' : '🐱 Cat'}
+                          {opt}
                         </label>
                       ))}
                     </div>

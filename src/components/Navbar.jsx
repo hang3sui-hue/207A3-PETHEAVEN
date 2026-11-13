@@ -103,7 +103,7 @@ export default function Navbar() {
               aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
               title={theme === 'dark' ? 'Light mode' : 'Dark mode'}
             >
-              {theme === 'dark' ? '☀️' : '🌙'}
+              {theme === 'dark' ? 'Light' : 'Dark'}
             </button>
           </div>
         </nav>

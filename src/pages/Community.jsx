@@ -126,7 +126,7 @@ export default function Community() {
                   <p>{r.text}</p>
                   <div className="review-actions">
                     <button className={`chip ${helpfulVotes.includes(r.id) ? 'on' : ''}`} onClick={() => toggleHelpful(r.id)} aria-pressed={helpfulVotes.includes(r.id)}>
-                      👍 Helpful ({helpfulCount(r)})
+                      Helpful ({helpfulCount(r)})
                     </button>
                     {user && r.email === user.email && (
                       <button className="chip" onClick={() => deleteReview(r.id)}>

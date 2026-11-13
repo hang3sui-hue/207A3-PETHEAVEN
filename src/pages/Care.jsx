@@ -16,12 +16,12 @@ export default function Care() {
   const [checked, setChecked] = useLocalStorage('checklist', [])
 
   const tips = careTips.filter((tip) => show === 'All' || tip.for === show || tip.for === 'Both')
-  const items = tips.map((tip) => ({
+  const items = tips.map((tip, i) => ({
     id: tip.id,
     title: (
       <>
         <span className="tip-icon" aria-hidden="true">
-          {tip.icon}
+          {String(i + 1).padStart(2, '0')}
         </span>
         {tip.title}
         {tip.for !== 'Both' && <span className="mini-tag">{tip.for}s</span>}

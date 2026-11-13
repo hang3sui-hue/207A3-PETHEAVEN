@@ -59,10 +59,10 @@ export default function About() {
             </div>
           </div>
           <div className="feature-grid">
-            {FACILITIES.map((f) => (
+            {FACILITIES.map((f, i) => (
               <div key={f.title} className="feature">
                 <span className="feature-icon" aria-hidden="true">
-                  {f.icon}
+                  {String(i + 1).padStart(2, '0')}
                 </span>
                 <h3>{f.title}</h3>
                 <p>{f.text}</p>

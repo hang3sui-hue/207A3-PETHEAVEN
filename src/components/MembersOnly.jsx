@@ -14,7 +14,7 @@ export default function MembersOnly({ children, message }) {
   return (
     <div className="members-only">
       <div className="members-only-icon" aria-hidden="true">
-        🔒
+        Members only
       </div>
       <h3>Members only</h3>
       <p>{message}</p>

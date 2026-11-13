@@ -23,7 +23,7 @@ export default function Staff() {
       <section className="section">
         <div className="container narrow members-only">
           <div className="members-only-icon" aria-hidden="true">
-            🔒
+            Staff only
           </div>
           <h3>Staff only</h3>
           <p>This page is for Pet Heaven staff. Please log in with a staff account.</p>
@@ -61,7 +61,7 @@ function Inbox() {
 
           {shown.length === 0 ? (
             <div className="empty-state">
-              <p className="empty-icon" aria-hidden="true">📭</p>
+              <p className="empty-icon" aria-hidden="true">0</p>
               <h3>No requests yet</h3>
               <p>Forms sent from the Adopt, Release and Contact pages will appear here.</p>
             </div>

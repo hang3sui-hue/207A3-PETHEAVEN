@@ -254,7 +254,7 @@ main:focus {
   justify-content: center;
   gap: 0.4rem;
   padding: 0.75rem 1.4rem;
-  border-radius: 999px;
+  border-radius: 0;
   border: 2px solid transparent;
   font-weight: 800;
   font-size: 0.98rem;
@@ -357,7 +357,7 @@ main:focus {
   font-size: 0.8rem;
   font-weight: 700;
   padding: 0.2rem 0.65rem;
-  border-radius: 999px;
+  border-radius: 0;
 }
 .tags-green li {
   background: var(--teal-soft);
@@ -370,7 +370,7 @@ main:focus {
   font-weight: 800;
   background: var(--teal-soft);
   color: var(--teal);
-  border-radius: 999px;
+  border-radius: 0;
   padding: 0.1rem 0.55rem;
   margin-left: 0.6rem;
   text-transform: uppercase;
@@ -380,7 +380,7 @@ main:focus {
 .chip {
   border: 1px solid var(--line);
   background: var(--surface);
-  border-radius: 999px;
+  border-radius: 0;
   padding: 0.3rem 0.8rem;
   font-size: 0.85rem;
   font-weight: 700;
@@ -950,7 +950,7 @@ main:focus {
   font-size: 0.78rem;
   font-weight: 800;
   padding: 0.2rem 0.7rem;
-  border-radius: 999px;
+  border-radius: 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 .status-badge.reserved {
@@ -995,7 +995,7 @@ main:focus {
   gap: 0.4rem;
   background: var(--tint);
   padding: 0.35rem;
-  border-radius: 999px;
+  border-radius: 0;
   justify-self: start;
   margin-bottom: 1.5rem;
 }
@@ -1006,7 +1006,7 @@ main:focus {
   border: 0;
   background: transparent;
   padding: 0.5rem 1.1rem;
-  border-radius: 999px;
+  border-radius: 0;
   font-weight: 800;
   color: var(--soft);
   display: inline-flex;
@@ -1032,7 +1032,7 @@ main:focus {
 .count-dot {
   background: var(--primary);
   color: #fff;
-  border-radius: 999px;
+  border-radius: 0;
   font-size: 0.72rem;
   min-width: 20px;
   height: 20px;
@@ -1327,7 +1327,7 @@ textarea {
   display: inline-flex;
   align-items: center;
   border: 1.5px solid var(--line);
-  border-radius: 999px;
+  border-radius: 0;
   padding: 0.55rem 1.1rem;
   font-weight: 700;
   cursor: pointer;
@@ -2201,7 +2201,7 @@ textarea {
 .type-pill {
   font-size: 0.75rem;
   font-weight: 800;
-  border-radius: 999px;
+  border-radius: 0;
   padding: 0.2rem 0.7rem;
   background: var(--tint);
 }
@@ -2216,7 +2216,7 @@ textarea {
 .req-status {
   font-size: 0.8rem;
   font-weight: 800;
-  border-radius: 999px;
+  border-radius: 0;
   padding: 0.25rem 0.75rem;
   white-space: nowrap;
 }
@@ -2252,7 +2252,7 @@ textarea {
   background: var(--ink);
   color: var(--bg);
   padding: 0.8rem 1.3rem;
-  border-radius: 999px;
+  border-radius: 0;
   font-weight: 700;
   box-shadow: var(--shadow-lg);
   animation: toastIn 3.2s var(--ease) both;
@@ -2556,7 +2556,7 @@ textarea {
 input[type='file']::file-selector-button {
   border: 1.5px solid var(--line);
   background: var(--tint);
-  border-radius: 999px;
+  border-radius: 0;
   padding: 0.5rem 1rem;
   margin-right: 0.8rem;
   font-weight: 800;
@@ -2577,3 +2577,202 @@ input[type='file']::file-selector-button:hover {
   text-align: center;
   margin: 1.2rem 0 0;
 }
+
+/* =====================================================
+   STREET LAYER – streetwear "lookbook" style (overrides above)
+   Cream + ink black + one green. Bold condensed type, square edges,
+   thick borders and sticker labels.
+   ===================================================== */
+:root {
+  --bg: #f3eee3;
+  --surface: #fbf8f1;
+  --tint: #ebe4d4;
+  --ink: #141414;
+  --soft: #5c5a54;
+  --line: #141414;
+  --primary: #3d7a37;
+  --primary-dark: #2d5e29;
+  --primary-soft: #dfe9d6;
+  --teal: #141414;
+  --sun: #b8e07a;
+  --font-head: 'Anton', 'Arial Narrow', Impact, sans-serif;
+  --font-body: 'Space Grotesk Variable', 'Helvetica Neue', Arial, sans-serif;
+  --radius: 0px;
+  --radius-sm: 0px;
+  --shadow: none;
+  --shadow-lg: 6px 6px 0 var(--ink);
+}
+[data-theme='dark'] {
+  --bg: #121311;
+  --surface: #1b1c19;
+  --tint: #1f211d;
+  --ink: #f3eee3;
+  --soft: #b3ad9f;
+  --line: #f3eee3;
+  --primary: #9fd36a;
+  --primary-dark: #b8e07a;
+  --primary-soft: #26301f;
+  --teal: #f3eee3;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  line-height: 0.98;
+}
+h3 { font-size: 1.45rem; }
+h4 { font-family: var(--font-body); font-weight: 700; letter-spacing: 0.08em; font-size: 0.85rem; }
+.eyebrow, .look-no, .split-label, .street-hero-top {
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.75rem;
+  color: var(--ink);
+}
+
+/* Buttons: square, uppercase, hard shadow on hover */
+.btn {
+  border-radius: 0;
+  border: 2px solid var(--ink);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  font-weight: 700;
+  box-shadow: none !important;
+}
+.btn:hover { transform: translate(-3px, -3px); box-shadow: 3px 3px 0 var(--ink) !important; }
+.btn-primary { background: var(--primary); color: #fff; border-color: var(--ink); }
+[data-theme='dark'] .btn-primary { color: #121311; }
+.btn-outline { background: transparent; color: var(--ink); }
+.btn-dark { background: var(--ink); color: var(--bg); }
+.btn-light { background: var(--bg); color: #141414; }
+
+/* Header: thin rule, uppercase links */
+.site-header { border-bottom: 2px solid var(--ink); background: var(--bg); backdrop-filter: none; }
+.site-header.scrolled { box-shadow: none; border-color: var(--ink); }
+.site-header nav a { text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; font-weight: 700; }
+
+/* Cards as lookbook frames */
+.pet-card, .card, .feature, .quote, .path-card, .form-card, .panel {
+  border: 2px solid var(--ink) !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.pet-card:hover { transform: translate(-4px, -4px); box-shadow: 6px 6px 0 var(--ink) !important; }
+.pet-card-art { aspect-ratio: 4 / 5; border-bottom: 2px solid var(--ink); background: var(--tint); }
+.pet-card:hover .pet-card-art svg { transform: scale(1.04); }
+.pet-card-body h3 { font-size: 2rem; margin: 0.1rem 0 0.2rem; }
+.look-no { margin: 0; color: var(--soft); }
+.status-badge {
+  border-radius: 0; box-shadow: none; background: var(--ink); color: var(--bg);
+  text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.68rem;
+}
+.status-badge.reserved { background: var(--bg); color: var(--ink); border: 2px solid var(--ink); }
+.tags li { border-radius: 0; border: 1.5px solid var(--ink); background: transparent; text-transform: uppercase; font-size: 0.68rem; letter-spacing: 0.08em; font-weight: 700; }
+.heart { border-radius: 0; border: 2px solid var(--ink); }
+
+/* Stickers */
+.sticker {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  padding: 0.35rem 0.6rem;
+  border: 2px solid var(--ink);
+  transform: rotate(-4deg);
+}
+.sticker-new { position: absolute; right: 0.9rem; bottom: 0.9rem; background: var(--sun); color: #141414; }
+.sticker-green { background: var(--primary); color: #fff; }
+
+/* Numbered labels that replaced emoji icons */
+.feature-icon, .tip-icon, .members-only-icon, .empty-icon {
+  font-family: var(--font-head);
+  background: none !important;
+  color: var(--primary);
+  border-radius: 0 !important;
+  width: auto !important; height: auto !important;
+  font-size: 2.2rem;
+  line-height: 1;
+}
+.tip-icon { font-size: 1.3rem; margin-right: 0.6rem; }
+.members-only-icon { font-size: 1.6rem; text-transform: uppercase; }
+
+/* Inner page headers: flat block with heavy rule */
+.page-header { background: var(--bg); border-bottom: 2px solid var(--ink); padding: 3rem 0 2.5rem; }
+.page-header h1 { font-size: clamp(3rem, 8vw, 6.5rem); max-width: none; }
+.page-header-wave { display: none; }
+
+/* ---------- Home: hero wordmark ---------- */
+.street-hero { padding: 2rem 0 2.5rem; border-bottom: 2px solid var(--ink); }
+.street-hero-top { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-bottom: 1rem; border-bottom: 2px solid var(--ink); }
+.wordmark {
+  font-size: clamp(5rem, 19vw, 17rem);
+  line-height: 0.82;
+  letter-spacing: -0.01em;
+  margin: 1.4rem 0 1.6rem;
+}
+.wordmark-dot { color: var(--primary); }
+.street-hero-bottom { display: grid; grid-template-columns: 1fr auto; gap: 2rem; align-items: end; }
+.street-hero-bottom p { max-width: 46ch; margin: 0; font-size: 1.1rem; }
+.street-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+
+/* Running ticker */
+.ticker { overflow: hidden; background: var(--ink); color: var(--bg); border-bottom: 2px solid var(--ink); }
+.ticker-track { display: flex; width: max-content; animation: ticker 28s linear infinite; }
+.ticker span { font-family: var(--font-head); text-transform: uppercase; font-size: 1.4rem; padding: 0.6rem 1.4rem; white-space: nowrap; }
+.ticker b { color: var(--sun); font-weight: 400; margin-left: 1.4rem; }
+@keyframes ticker { to { transform: translateX(-33.333%); } }
+@media (prefers-reduced-motion: reduce) { .ticker-track { animation: none; } }
+
+/* Lookbook header */
+.look-head { display: grid; grid-template-columns: auto 1fr auto; gap: 2rem; align-items: end; margin-bottom: 2rem; }
+.look-head h2 { font-size: clamp(3rem, 7vw, 5.5rem); margin: 0; }
+.look-head p { margin: 0; max-width: 40ch; color: var(--soft); }
+.link-arrow { font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.82rem; color: var(--ink); }
+.pet-grid.lookbook { grid-template-columns: repeat(3, 1fr); gap: 1.6rem; }
+
+/* Split adopt / release banner */
+.split { display: grid; grid-template-columns: 1fr 1fr; border-top: 2px solid var(--ink); border-bottom: 2px solid var(--ink); }
+.split-panel { display: flex; flex-direction: column; gap: 0.8rem; padding: 3.5rem max(1.5rem, 4vw); text-decoration: none; transition: background-color 0.25s; }
+.split-panel strong { font-family: var(--font-head); font-weight: 400; text-transform: uppercase; font-size: clamp(2.6rem, 5vw, 4.4rem); line-height: 0.95; }
+.split-text { max-width: 36ch; }
+.split-go { margin-top: auto; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.82rem; }
+.split-adopt { background: var(--primary); color: #fff; border-right: 2px solid var(--ink); }
+.split-adopt .split-label { color: #fff; }
+.split-release { background: var(--surface); color: var(--ink); }
+.split-panel:hover { background: var(--ink); color: var(--bg); }
+.split-panel:hover .split-label { color: var(--bg); }
+
+/* Big quote */
+.street-quote { max-width: 980px; }
+.street-quote blockquote { font-family: var(--font-head); text-transform: uppercase; font-size: clamp(2rem, 4.5vw, 3.6rem); line-height: 1.02; margin: 1.2rem 0; }
+.street-quote-by { font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; font-size: 0.8rem; color: var(--soft); }
+
+/* Footer: ink block */
+.site-footer { background: #141414; border-top: 2px solid var(--ink); }
+.site-footer h4 { color: var(--sun); }
+.JHyper { font-family: 'Space Grotesk Variable', sans-serif; font-style: italic; color: var(--sun); }
+
+@media (max-width: 900px) {
+  .pet-grid.lookbook { grid-template-columns: repeat(2, 1fr); }
+  .look-head { grid-template-columns: 1fr; }
+  .street-hero-bottom { grid-template-columns: 1fr; }
+  .split { grid-template-columns: 1fr; }
+  .split-adopt { border-right: 0; border-bottom: 2px solid var(--ink); }
+}
+@media (max-width: 560px) {
+  .pet-grid.lookbook { grid-template-columns: 1fr; }
+}
+
+/* Street layer – small fixes */
+.theme-toggle { width: auto !important; height: auto !important; padding: 0.45rem 0.7rem; border: 2px solid var(--ink) !important; border-radius: 0 !important; font-family: var(--font-body); font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.72rem; background: transparent; color: var(--ink); }
+.species-tabs { border: 2px solid var(--ink); background: transparent !important; padding: 0 !important; gap: 0 !important; }
+.species-tabs button { font-family: var(--font-body); text-transform: uppercase; letter-spacing: 0.08em; font-weight: 700; font-size: 0.8rem; }
+.species-tabs button.active { background: var(--ink) !important; color: var(--bg) !important; box-shadow: none !important; }
+.brand span { font-family: var(--font-head); text-transform: uppercase; font-size: 1.5rem; letter-spacing: 0.02em; }
+.brand b { color: var(--primary); font-weight: 400; }
+.theme-toggle:hover { transform: none; background: var(--ink); color: var(--bg); }
