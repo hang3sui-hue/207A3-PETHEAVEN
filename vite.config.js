@@ -6,4 +6,6 @@ import { defineConfig } from 'vite'
 export default defineConfig({
   plugins: [react()],
   base: './',
+  // Integration tests (npm test) run the whole app in a simulated browser
+  test: { environment: 'jsdom', setupFiles: './src/test/setup.js' },
 })

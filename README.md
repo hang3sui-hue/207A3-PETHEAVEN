@@ -43,3 +43,12 @@ public/media/   pet care video and poster
 ```
 
 All names, addresses, phone numbers and pets are fictional. Pet pictures are drawn in code (SVG).
+
+## Integration testing
+
+Run `npm test`. Five integration tests render the whole app (router + all contexts) and check real user flows:
+1. SPA navigation between pages
+2. Searching the pet directory
+3. Login form validation
+4. Wrong password rejected, demo member logs in
+5. Release form blocks empty submission
