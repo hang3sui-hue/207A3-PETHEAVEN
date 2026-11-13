@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import pets from '../data/pets'
 import reviews from '../data/reviews'
 import usePageTitle from '../hooks/usePageTitle'
+import { img } from '../utils/images'
 import PetCard from '../components/PetCard'
 import PetDetails from '../components/PetDetails'
 
@@ -28,24 +29,32 @@ export default function Home() {
             <span>Cat & dog rescue / Singapore</span>
             <span>{available.length} pets are waiting for a family</span>
           </div>
-          <h1 className="wordmark">
-            Pet
-            <br />
-            Heaven<span className="wordmark-dot">♥</span>
-          </h1>
-          <div className="street-hero-bottom">
-            <p>
-              We look after abandoned cats and dogs with love, until each one finds a family of its own. Come meet them, or let us
-              help when you can no longer care for yours. No judgement, only kindness.
-            </p>
-            <div className="street-actions">
-              <Link to="/pets" className="btn btn-primary btn-lg">
-                Meet our pets
-              </Link>
-              <Link to="/release" className="btn btn-outline btn-lg">
-                Release a pet
-              </Link>
+          <div className="home-hero-grid">
+            <div>
+              <h1 className="wordmark">
+                Pet
+                <br />
+                Heaven<span className="wordmark-dot">♥</span>
+              </h1>
+              <p className="home-hero-text">
+                We look after abandoned cats and dogs with love, until each one finds a family of its own. Come meet them, or let us
+                help when you can no longer care for yours. No judgement, only kindness.
+              </p>
+              <div className="street-actions">
+                <Link to="/pets" className="btn btn-primary btn-lg">
+                  Meet our pets
+                </Link>
+                <Link to="/release" className="btn btn-outline btn-lg">
+                  Release a pet
+                </Link>
+              </div>
             </div>
+            <figure className="home-hero-photo">
+              <img src={img('hero/home-hero.jpg')} alt="A golden dog and a ginger cat resting together on a cream sofa" />
+              <figcaption>
+                <span aria-hidden="true">♥</span> Best friends, both adopted from Pet Heaven
+              </figcaption>
+            </figure>
           </div>
         </div>
       </section>

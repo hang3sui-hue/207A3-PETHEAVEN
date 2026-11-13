@@ -2,12 +2,13 @@ import { Link } from 'react-router-dom'
 import { FACILITIES, SITE, TEAM } from '../data/siteInfo'
 import usePageTitle from '../hooks/usePageTitle'
 import PageHeader from '../components/PageHeader'
+import { img, teamPhoto } from '../utils/images'
 
 export default function About() {
   usePageTitle('About Us')
   return (
     <>
-      <PageHeader
+      <PageHeader image={img('pages/about.jpg')}
         eyebrow="About us"
         title="A safe place between homes"
         text="Pet Heaven is a volunteer-run charity society in Singapore. We take in cats and dogs whose owners can no longer keep them, and we find each one a new family."
@@ -60,7 +61,8 @@ export default function About() {
           </div>
           <div className="feature-grid">
             {FACILITIES.map((f, i) => (
-              <div key={f.title} className="feature">
+              <div key={f.title} className="feature feature-photo">
+                <img src={img(`facilities/${f.photo}.jpg`)} alt={f.title} loading="lazy" />
                 <span className="feature-icon" aria-hidden="true">
                   {String(i + 1).padStart(2, '0')}
                 </span>
@@ -83,12 +85,7 @@ export default function About() {
           <div className="team-grid">
             {TEAM.map((person) => (
               <div key={person.name} className="team-card">
-                <span className="team-avatar" style={{ background: person.colour }} aria-hidden="true">
-                  {person.name
-                    .split(' ')
-                    .map((n) => n[0])
-                    .join('')}
-                </span>
+                <img className="team-photo" src={teamPhoto(person.name)} alt={`Illustration of ${person.name}`} loading="lazy" />
                 <h3>{person.name}</h3>
                 <p>{person.role}</p>
               </div>

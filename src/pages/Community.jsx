@@ -9,6 +9,7 @@ import MembersOnly from '../components/MembersOnly'
 import PageHeader from '../components/PageHeader'
 import StarRating from '../components/StarRating'
 import { useAuth, useToast } from '../hooks/useAppContext'
+import { img } from '../utils/images'
 
 const formatDate = (iso) => new Date(iso).toLocaleDateString('en-SG', { day: 'numeric', month: 'short', year: 'numeric' })
 
@@ -49,7 +50,7 @@ export default function Community() {
 
   return (
     <>
-      <PageHeader
+      <PageHeader image={img('pages/community.jpg')}
         eyebrow="Community"
         title="Reviews & feedback from our members"
         text="Real stories from adopters, volunteers and owners who released a pet to us. Members can share their own experience."

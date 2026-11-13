@@ -11,6 +11,7 @@ import PageHeader from '../components/PageHeader'
 import PetArt from '../components/PetArt'
 import SuccessPanel from '../components/SuccessPanel'
 import { useAuth } from '../hooks/useAppContext'
+import { img } from '../utils/images'
 
 const availablePets = pets.filter((p) => p.status === 'Available')
 
@@ -53,7 +54,7 @@ export default function Adopt() {
 
   return (
     <>
-      <PageHeader
+      <PageHeader image={img('pages/adopt.jpg')}
         eyebrow="Adoption request"
         title={chosen ? `Adopt ${chosen.name}` : 'Adopt a pet'}
         text="Tell us a little about you and your home. Our adoption team will contact you within 3 working days."

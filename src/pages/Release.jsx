@@ -8,6 +8,7 @@ import FormField from '../components/FormField'
 import PageHeader from '../components/PageHeader'
 import SuccessPanel from '../components/SuccessPanel'
 import { useAuth } from '../hooks/useAppContext'
+import { img } from '../utils/images'
 
 const LABELS = {
   ownerName: 'Owner name',
@@ -93,7 +94,7 @@ export default function Release() {
 
   return (
     <>
-      <PageHeader
+      <PageHeader image={img('pages/release.jpg')}
         eyebrow="Release a pet"
         title="We are here to help"
         text="If you can no longer care for your pet, tell us about them below. A staff member will call you to talk about the best next step for your pet."

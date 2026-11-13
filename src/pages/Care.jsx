@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import careTips, { firstMonthChecklist } from '../data/careTips'
 import useLocalStorage from '../hooks/useLocalStorage'
+import { img } from '../utils/images'
 import usePageTitle from '../hooks/usePageTitle'
 import Accordion from '../components/Accordion'
 import PageHeader from '../components/PageHeader'
@@ -28,11 +29,14 @@ export default function Care() {
       </>
     ),
     content: (
+      <>
+      <img className="tip-img" src={img(`care/${tip.id}.jpg`)} alt="" loading="lazy" />
       <ul className="tick-list">
         {tip.points.map((point) => (
           <li key={point}>{point}</li>
         ))}
       </ul>
+      </>
     ),
   }))
 

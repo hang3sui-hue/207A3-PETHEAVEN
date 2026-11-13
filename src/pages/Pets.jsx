@@ -6,6 +6,7 @@ import PageHeader from '../components/PageHeader'
 import PetCard from '../components/PetCard'
 import PetDetails from '../components/PetDetails'
 import { useFavourites } from '../hooks/useAppContext'
+import { img } from '../utils/images'
 
 const EMPTY_FILTERS = { search: '', species: 'All', age: 'All', size: 'All', gender: 'All', kids: false, favourites: false, sort: 'newest' }
 
@@ -47,7 +48,7 @@ export default function Pets() {
 
   return (
     <>
-      <PageHeader
+      <PageHeader image={img('hero/home-hero.jpg')}
         eyebrow="Adopt"
         title="Meet our cats and dogs"
         text="Every pet is vaccinated, health-checked and waiting for a family. Click a pet to read its story."

@@ -3,6 +3,7 @@ import { STATS } from '../data/siteInfo'
 import usePageTitle from '../hooks/usePageTitle'
 import CountUp from '../components/CountUp'
 import PageHeader from '../components/PageHeader'
+import { img } from '../utils/images'
 
 const VALUES = [
   { title: 'Kindness', text: 'Every animal is treated with patience and respect, whatever its age or health.' },
@@ -22,7 +23,7 @@ export default function Mission() {
   usePageTitle('Our Mission')
   return (
     <>
-      <PageHeader eyebrow="Mission & purpose" title="Why Pet Heaven exists" text="No cat or dog in Singapore should be left without care.">
+      <PageHeader image={img('pages/mission.jpg')} eyebrow="Mission & purpose" title="Why Pet Heaven exists" text="No cat or dog in Singapore should be left without care.">
         <blockquote className="mission-quote">
           “Our mission is to give every abandoned cat and dog a safe place to recover and a loving home for life, and to help owners
           make kind choices when they can no longer care for their pets.”
