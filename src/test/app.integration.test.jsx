@@ -74,4 +74,16 @@ describe('Pet Heaven SPA – integration tests', () => {
     expect(await screen.findByText(/Showing/)).toBeInTheDocument()
     expect(screen.queryByRole('link', { name: /log in \/ join/i })).not.toBeInTheDocument()
   })
+
+  it('7. random match picks an available pet and opens its details', async () => {
+    const user = userEvent.setup()
+    window.matchMedia = () => ({ matches: true, addEventListener() {}, removeEventListener() {} }) // skip the shuffle animation
+    renderApp('/')
+    await user.click(screen.getByRole('button', { name: 'Dogs' }))
+    await user.click(screen.getByRole('button', { name: /match me with a pet/i }))
+    const heading = await screen.findByRole('heading', { name: /^it’s .+!$/i })
+    const name = heading.textContent.replace(/^It’s |!$/g, '')
+    await user.click(screen.getByRole('button', { name: new RegExp(`meet ${name}`, 'i') }))
+    expect(await screen.findByRole('heading', { name: new RegExp(`hi, i'm ${name}`, 'i') })).toBeInTheDocument()
+  })
 })

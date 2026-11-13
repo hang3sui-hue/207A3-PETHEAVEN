@@ -6,6 +6,7 @@ import usePageTitle from '../hooks/usePageTitle'
 import { img } from '../utils/images'
 import PetCard from '../components/PetCard'
 import PetDetails from '../components/PetDetails'
+import RandomMatch from '../components/RandomMatch'
 
 // Home page in a streetwear "lookbook" style:
 // big wordmark, a running ticker, pets shown as numbered looks, and a split adopt / release banner.
@@ -89,6 +90,12 @@ export default function Home() {
               <PetCard key={pet.id} pet={pet} look={i + 1} isNew={pet.id === newestId} onOpen={setSelectedPet} />
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section section-tight">
+        <div className="container">
+          <RandomMatch onOpen={setSelectedPet} />
         </div>
       </section>
 

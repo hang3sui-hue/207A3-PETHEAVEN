@@ -3090,3 +3090,36 @@ h4 { font-family: var(--font-head); letter-spacing: 0; font-size: 1.05rem; }
 .btn-green { background: var(--green); color: #fff; border-color: var(--green); }
 .btn-green:hover { background: #557f48; border-color: #557f48; box-shadow: 0 10px 22px rgba(106, 154, 91, 0.3) !important; }
 @media (max-width: 800px) { .choice-grid { grid-template-columns: 1fr; } }
+
+/* Random match ("Can't decide?") */
+.match {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center;
+  background: linear-gradient(135deg, var(--primary-soft), var(--green-soft));
+  border-radius: 36px; padding: 2.8rem;
+}
+.match-text { display: flex; flex-direction: column; align-items: flex-start; gap: 1rem; }
+.match-text h2 { font-size: clamp(2rem, 4vw, 2.9rem); margin: 0; }
+.match-text p { color: var(--soft); margin: 0; max-width: 44ch; }
+.match-text .species-tabs { background: var(--surface) !important; }
+.match-card {
+  background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow-lg); overflow: hidden;
+  display: grid; grid-template-columns: 1fr 1fr; min-height: 300px;
+}
+.match-photo { min-height: 300px; overflow: hidden; }
+.match-photo .pet-photo { height: 100%; }
+.match-card.is-rolling .match-photo { grid-column: 1 / -1; filter: saturate(0.9); }
+.match-card.is-rolling .pet-photo { animation: shake 0.18s linear infinite; }
+.match-card.is-revealed { animation: pop 0.5s var(--ease); }
+.match-info { padding: 1.6rem; display: flex; flex-direction: column; align-items: flex-start; gap: 0.45rem; }
+.match-info h3 { font-size: 2rem; margin: 0; }
+.match-info .tags { margin-bottom: 0.4rem; }
+.match-empty { grid-column: 1 / -1; display: grid; place-items: center; text-align: center; color: var(--soft); padding: 2rem; }
+.match-empty span { font-family: var(--font-head); font-size: 5rem; color: var(--primary); line-height: 1; animation: beat 1.6s ease-in-out infinite; }
+@keyframes shake { 0%, 100% { transform: translateX(0) scale(1.03); } 50% { transform: translateX(-4px) scale(1.03); } }
+@keyframes pop { 0% { transform: scale(0.94); } 60% { transform: scale(1.02); } 100% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .match-card, .match-card .pet-photo { animation: none !important; } }
+@media (max-width: 900px) {
+  .match { grid-template-columns: 1fr; padding: 1.8rem; }
+}
+@media (max-width: 520px) { .match-card { grid-template-columns: 1fr; } }
+.match-card { height: 330px; } .match-photo { min-height: 0; height: 330px; } .match-card .pet-photo { height: 330px; } @media (max-width: 520px) { .match-card { height: auto; } .match-photo, .match-card .pet-photo { height: 260px; } }

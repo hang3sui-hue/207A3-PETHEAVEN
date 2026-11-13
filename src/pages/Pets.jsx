@@ -3,6 +3,7 @@ import { useSearchParams } from 'react-router-dom'
 import pets, { findPet, getAgeGroup } from '../data/pets'
 import usePageTitle from '../hooks/usePageTitle'
 import PageHeader from '../components/PageHeader'
+import RandomMatch from '../components/RandomMatch'
 import PetCard from '../components/PetCard'
 import PetDetails from '../components/PetDetails'
 import { useFavourites } from '../hooks/useAppContext'
@@ -148,6 +149,12 @@ export default function Pets() {
               </button>
             </div>
           )}
+        </div>
+      </section>
+
+      <section className="section section-tight">
+        <div className="container">
+          <RandomMatch onOpen={setSelectedPet} />
         </div>
       </section>
 
