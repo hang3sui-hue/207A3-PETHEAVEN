@@ -15,22 +15,22 @@
 
 /* ---------- 1. Colours and theme ---------- */
 :root {
-  --bg: #fbf7f1;
-  --surface: #ffffff;
-  --tint: #f5ede2;
+  --bg: #f8f3e8;
+  --surface: #fffdf7;
+  --tint: #f1eadb;
   --ink: #2b2a33;
   --soft: #6b6672;
-  --line: #e9dfd2;
-  --primary: #e07a5f;
-  --primary-dark: #c55f44;
-  --primary-soft: #fde4da;
-  --teal: #2a6f6a;
-  --teal-soft: #dcefe9;
+  --line: #e5dcc9;
+  --primary: #5b8c51;
+  --primary-dark: #45713d;
+  --primary-soft: #e3eedb;
+  --teal: #3f6b45;
+  --teal-soft: #e1ecdc;
   --sun: #f2cc8f;
   --danger: #c0392b;
   --danger-soft: #fdecea;
   --dark-btn: #2b2a33;
-  --map-land: #f1ebe0;
+  --map-land: #f1eadb;
   --map-park: #cfe5d6;
   --map-road: #ffffff;
 
@@ -52,11 +52,11 @@
   --ink: #f2eee8;
   --soft: #a9a5ae;
   --line: #333840;
-  --primary: #ef8b70;
-  --primary-dark: #f7a58e;
-  --primary-soft: #3a2721;
-  --teal: #6cc0b4;
-  --teal-soft: #1f3532;
+  --primary: #8cc47f;
+  --primary-dark: #a8d69c;
+  --primary-soft: #24331f;
+  --teal: #8cc47f;
+  --teal-soft: #22301f;
   --danger: #ff8a7a;
   --danger-soft: #3a2220;
   --dark-btn: #f2eee8;
@@ -277,7 +277,7 @@ main:focus {
 .btn-primary {
   background: var(--primary);
   color: #fff;
-  box-shadow: 0 6px 18px rgba(224, 122, 95, 0.35);
+  box-shadow: 0 6px 18px rgba(91, 140, 81, 0.35);
 }
 .btn-primary:hover {
   background: var(--primary-dark);
@@ -728,7 +728,7 @@ main:focus {
   padding: 2.2rem 0;
 }
 [data-theme='dark'] .stats-band {
-  background: #1f3532;
+  background: #22301f;
 }
 .stats-grid {
   display: grid;
@@ -743,7 +743,7 @@ main:focus {
   padding: 2.2rem 1rem;
 }
 [data-theme='dark'] .stats-grid.boxed {
-  background: #1f3532;
+  background: #22301f;
 }
 .stat strong {
   display: block;
@@ -857,7 +857,7 @@ main:focus {
   justify-content: space-between;
   gap: 2rem;
   flex-wrap: wrap;
-  background: linear-gradient(120deg, var(--primary), #e9a26c);
+  background: linear-gradient(120deg, var(--primary), #7fa868);
   color: #fff;
   border-radius: 28px;
   padding: 2.8rem 3rem;
@@ -870,7 +870,7 @@ main:focus {
   opacity: 0.95;
 }
 [data-theme='dark'] .cta-band {
-  background: linear-gradient(120deg, #8c4433, #7a5531);
+  background: linear-gradient(120deg, #2f4a2b, #3f5a32);
 }
 
 /* ---------- 7. Pet cards, filters and modal ---------- */
@@ -1775,7 +1775,7 @@ textarea {
   display: block;
   height: 100%;
   border-radius: inherit;
-  background: linear-gradient(90deg, var(--teal), #3fb37f);
+  background: linear-gradient(90deg, var(--teal), #7fa868);
   transition: width 0.6s var(--ease);
 }
 
