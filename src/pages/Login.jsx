@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
 import useForm from '../hooks/useForm'
 import usePageTitle from '../hooks/usePageTitle'
-import { checkEmail, required } from '../utils/validation'
+import { required } from '../utils/validation'
 import AuthLayout from '../components/AuthLayout'
 import FormField from '../components/FormField'
 import PasswordInput from '../components/PasswordInput'
@@ -17,7 +17,7 @@ export default function Login() {
   const [loginError, setLoginError] = useState('')
 
   const { values, errors, field, validateAll } = useForm({ email: '', password: '' }, (v) => ({
-    email: checkEmail(v.email),
+    email: required(v.email, 'Email or username'),
     password: required(v.password, 'Password'),
   }))
 
@@ -26,7 +26,7 @@ export default function Login() {
     setLoginError('')
     if (!validateAll()) return
     if (!login(values.email, values.password)) {
-      setLoginError('The email or password is wrong. Please try again.')
+      setLoginError('The username or password is wrong. Please try again.')
       return
     }
     showToast('Welcome back.')
@@ -42,8 +42,8 @@ export default function Login() {
             {loginError}
           </p>
         )}
-        <FormField label="Email" error={errors.email} required>
-          <input type="email" autoComplete="email" {...field('email')} />
+        <FormField label="Email or username" error={errors.email} required>
+          <input type="text" autoComplete="username" {...field('email')} />
         </FormField>
         <FormField label="Password" error={errors.password} required>
           <PasswordInput autoComplete="current-password" {...field('password')} />
@@ -59,8 +59,8 @@ export default function Login() {
         </p>
         <div className="demo-box">
           <strong>Demo accounts</strong>
-          <span>Member: member@petheaven.com / 1234</span>
-          <span>Staff: staff@petheaven.com / 1234</span>
+          <span>Member: admin / 1234</span>
+          <span>Staff: staff / 1234</span>
         </div>
       </form>
     </AuthLayout>

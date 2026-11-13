@@ -33,10 +33,10 @@ describe('Pet Heaven SPA – integration tests', () => {
   it('4. rejects a wrong password and accepts the demo member', async () => {
     const user = userEvent.setup()
     renderApp('/login')
-    await user.type(screen.getByLabelText(/email/i), 'member@petheaven.com')
+    await user.type(screen.getByLabelText(/email or username/i), 'admin')
     await user.type(screen.getByLabelText(/^password/i), 'wrong')
     await user.click(screen.getByRole('button', { name: /log in/i }))
-    expect(await screen.findByText(/email or password is wrong/i)).toBeInTheDocument()
+    expect(await screen.findByText(/username or password is wrong/i)).toBeInTheDocument()
 
     await user.clear(screen.getByLabelText(/^password/i))
     await user.type(screen.getByLabelText(/^password/i), '1234')
