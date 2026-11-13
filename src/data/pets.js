@@ -228,12 +228,12 @@ const pets = [
     size: 'Medium',
     colour: 'Cream with chocolate points',
     arrived: '2026-11-12',
-    status: 'Available',
+    status: 'Memorial',
     personality: ['Round and fluffy', 'Sleepy', 'Loves cuddles'],
     goodWith: ['Kids', 'Cats'],
     health: { vaccinated: true, sterilised: true, microchipped: true },
     story:
-      'Douni is a round, fluffy Siamese with big blue eyes and a very serious face. He was found napping in a cardboard box outside a bakery. He loves long naps, warm laps and being carried like a baby.',
+      'Douni was a round, fluffy Siamese with big blue eyes and a very serious face. He was found napping in a cardboard box outside a bakery, and spent his days in our cat lounge napping on warm laps. Douni crossed the rainbow bridge peacefully in November 2026, surrounded by the people who loved him. He will always be part of the Pet Heaven family.',
     art: { fur: '#f1e6d6', accent: '#5a3f33', muzzle: '#f6efe6', ear: 'pointy', pattern: 'plain', bg: '#efe4d8', eyes: '#4a90d9' },
   },
 ]
@@ -257,7 +257,7 @@ export function findPet(id) {
 
 // Warm wording shown to visitors (the data keeps 'Available' / 'Reserved' for the logic).
 export function statusLabel(status) {
-  return { Available: 'Waiting for you', Reserved: 'Meeting a family' }[status] || status
+  return { Available: 'Waiting for you', Reserved: 'Meeting a family', Memorial: 'In loving memory' }[status] || status
 }
 
 export default pets

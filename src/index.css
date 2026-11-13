@@ -3131,3 +3131,9 @@ h4 { font-family: var(--font-head); letter-spacing: 0; font-size: 1.05rem; }
 @media (max-width: 900px) { .team-grid { grid-template-columns: repeat(2, 1fr) !important; } }
 .team-avatar.team-photo { width: 120px !important; height: 120px !important; border-radius: 50% !important; margin: 0 auto 0.8rem; }
 .status-badge { color: var(--primary-dark); } .status-badge.reserved { color: #a86a1d; }
+
+/* In loving memory */
+.pet-card.memorial .pet-photo { filter: grayscale(0.85) brightness(1.05); }
+.pet-card.memorial:hover .pet-photo { filter: grayscale(0.4); }
+.status-badge.memorial { color: var(--soft); }
+.memorial-note { margin: 0; padding: 0.7rem 1.1rem; border-radius: 999px; background: var(--primary-soft); color: var(--primary-dark); font-weight: 700; }

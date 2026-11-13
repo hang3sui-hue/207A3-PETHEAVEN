@@ -9,11 +9,11 @@ export default function PetCard({ pet, onOpen, look, isNew }) {
   const saved = isFavourite(pet.id)
 
   return (
-    <article className="pet-card">
+    <article className={`pet-card ${pet.status === 'Memorial' ? 'memorial' : ''}`}>
       <button className="pet-card-main" onClick={() => onOpen(pet)} aria-label={`See details of ${pet.name}`}>
         <div className="pet-card-art">
           <PetArt species={pet.species} art={pet.art} name={pet.name} />
-          <span className={`status-badge ${pet.status === 'Reserved' ? 'reserved' : ''}`}>♥ {statusLabel(pet.status)}</span>
+          <span className={`status-badge ${pet.status === 'Reserved' ? 'reserved' : ''} ${pet.status === 'Memorial' ? 'memorial' : ''}`}>♥ {statusLabel(pet.status)}</span>
           {isNew && <span className="sticker sticker-new">Just arrived</span>}
         </div>
         <div className="pet-card-body">

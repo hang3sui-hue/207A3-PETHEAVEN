@@ -68,7 +68,9 @@ export default function PetDetails({ pet, onClose }) {
           </ul>
 
           <div className="modal-actions">
-            {pet.status === 'Available' ? (
+            {pet.status === 'Memorial' ? (
+              <p className="memorial-note">♥ Forever in our hearts. Thank you for loving {pet.name}.</p>
+            ) : pet.status === 'Available' ? (
               <Link to={`/adopt?pet=${pet.id}`} className="btn btn-primary">
                 Adopt {pet.name}
               </Link>

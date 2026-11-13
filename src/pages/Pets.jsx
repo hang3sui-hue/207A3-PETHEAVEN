@@ -43,6 +43,8 @@ export default function Pets() {
       .filter((p) => !filters.kids || p.goodWith.includes('Kids'))
       .filter((p) => !filters.favourites || favourites.includes(p.id))
       .sort(SORTS[filters.sort])
+      // pets we remember are always shown last
+      .sort((a, b) => (a.status === 'Memorial') - (b.status === 'Memorial'))
   }, [filters, favourites])
 
   const activeFilters = JSON.stringify(filters) !== JSON.stringify(EMPTY_FILTERS)
