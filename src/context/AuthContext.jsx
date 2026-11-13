@@ -6,7 +6,7 @@ import { AuthContext } from './contexts'
 // There is no back-end: accounts are kept in localStorage for this demo.
 
 const DEMO_USERS = [
-  { name: 'Aisha Rahman', email: 'admin', phone: '9123 4567', password: '1234', role: 'member', plan: 'Supporter', joined: '2026-03-02' },
+  { name: 'Aisha Rahman', email: 'cust', phone: '9123 4567', password: '1234', role: 'member', plan: 'Supporter', joined: '2026-03-02' },
   { name: 'Daniel Lim', email: 'staff', phone: '6738 2468', password: '1234', role: 'staff', plan: 'Staff', joined: '2015-06-01' },
 ]
 

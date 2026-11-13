@@ -59,7 +59,7 @@ export default function Login() {
         </p>
         <div className="demo-box">
           <strong>Demo accounts</strong>
-          <span>Member: admin / 1234</span>
+          <span>Member: cust / 1234</span>
           <span>Staff: staff / 1234</span>
         </div>
       </form>

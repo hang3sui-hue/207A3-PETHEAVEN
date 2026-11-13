@@ -19,8 +19,8 @@ npm run build    # production build in the dist/ folder
 
 | Role   | Email                 | Password |
 |--------|-----------------------|----------|
-| Member | member@petheaven.com  | 1234     |
-| Staff  | staff@petheaven.com   | 1234     |
+| Member | cust                  | 1234     |
+| Staff  | staff                 | 1234     |
 
 ## Tech
 
