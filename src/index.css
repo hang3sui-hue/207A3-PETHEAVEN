@@ -569,7 +569,7 @@ main:focus {
 }
 
 .site-footer {
-  background: #23222a;
+  background: #2c3a2a;
   color: #cfcad3;
   padding: 4rem 0 1.5rem;
   margin-top: auto;
@@ -2565,4 +2565,15 @@ input[type='file']::file-selector-button {
 }
 input[type='file']::file-selector-button:hover {
   background: var(--primary-soft);
+}
+
+/* Signature (same as my Assignment 2) */
+.JHyper {
+  font-family: var(--font-head);
+  font-style: italic;
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  color: #a8d69c;
+  text-align: center;
+  margin: 1.2rem 0 0;
 }
