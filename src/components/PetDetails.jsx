@@ -31,7 +31,7 @@ export default function PetDetails({ pet, onClose }) {
         </div>
         <div className="pet-details-info">
           <p className="eyebrow">{pet.species} · {statusLabel(pet.status)}</p>
-          <h2>Hi, I'm {pet.name}!</h2>
+          <h2>{pet.status === 'Memorial' ? `Remembering ${pet.name}` : `Hi, I'm ${pet.name}!`}</h2>
           <p>{pet.story}</p>
 
           <dl className="facts">
