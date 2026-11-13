@@ -2865,3 +2865,157 @@ h4 { font-family: var(--font-body); font-weight: 700; letter-spacing: 0.08em; fo
 .auth-pets .photo-slot { width: 100%; max-width: 170px; min-height: 0; }
 .auth-side p { font-family: var(--font-body); font-weight: 600; font-size: 1.05rem; }
 .auth-pets .photo-slot { height: auto; aspect-ratio: 1 / 1; } .auth-pets { margin-bottom: 3rem; }
+
+/* =====================================================
+   COZY LAYER – final look: rounded, soft and pink-first.
+   Pink is the main colour (love), green is a small accent (nature, hope).
+   ===================================================== */
+:root {
+  --bg: #fdf7f2;
+  --surface: #ffffff;
+  --tint: #fbeee9;
+  --ink: #3b2f33;
+  --soft: #7a6a6e;
+  --line: #f1dfd8;
+  --primary: #e0738c;
+  --primary-dark: #c85a74;
+  --primary-soft: #fde4ea;
+  --love: #e0738c;
+  --love-soft: #fde4ea;
+  --green: #6a9a5b;
+  --green-soft: #e4efdc;
+  --teal: #6a9a5b;
+  --sun: #ffd3dc;
+  --font-head: 'Fredoka Variable', 'Nunito Variable', system-ui, sans-serif;
+  --font-body: 'Nunito Variable', 'Segoe UI', system-ui, sans-serif;
+  --radius: 26px;
+  --radius-sm: 14px;
+  --shadow: 0 10px 30px rgba(200, 90, 116, 0.10);
+  --shadow-lg: 0 18px 44px rgba(200, 90, 116, 0.18);
+}
+[data-theme='dark'] {
+  --bg: #1d1719;
+  --surface: #272023;
+  --tint: #2c2326;
+  --ink: #f7ecee;
+  --soft: #c2b0b5;
+  --line: #3d3135;
+  --primary: #f093a8;
+  --primary-dark: #f6aebd;
+  --primary-soft: #3c262c;
+  --love: #f093a8;
+  --love-soft: #3c262c;
+  --green: #9cc98a;
+  --green-soft: #26321f;
+}
+
+h1, h2, h3, h4 { text-transform: none; font-weight: 600; letter-spacing: -0.005em; line-height: 1.12; }
+h4 { font-family: var(--font-head); letter-spacing: 0; font-size: 1.05rem; }
+.eyebrow, .look-no, .split-label, .street-hero-top {
+  letter-spacing: 0.06em; font-weight: 800; color: var(--primary-dark); text-transform: none; font-size: 0.85rem;
+}
+
+/* Buttons: soft pills */
+.btn { border-radius: 999px !important; border: 2px solid transparent; text-transform: none; letter-spacing: 0; font-size: 0.98rem; font-weight: 800; }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(224, 115, 140, 0.3) !important; }
+.btn-primary { background: var(--primary); color: #fff; border-color: var(--primary); }
+.btn-primary:hover { background: var(--primary-dark); border-color: var(--primary-dark); }
+.btn-outline { border-color: var(--primary); color: var(--primary-dark); background: var(--surface); }
+.btn-outline:hover { background: var(--primary-soft); }
+.btn-dark { background: var(--ink); color: var(--bg); }
+.theme-toggle { border-radius: 999px !important; border: 2px solid var(--line) !important; text-transform: none; letter-spacing: 0; font-size: 0.8rem; }
+
+/* Header */
+.site-header { border-bottom: 1px solid var(--line) !important; background: color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter: blur(12px); }
+.site-header nav a { text-transform: none; letter-spacing: 0; font-size: 0.95rem; font-weight: 700; }
+.brand span { text-transform: none; font-size: 1.45rem; font-weight: 600; letter-spacing: 0; }
+.brand b { color: var(--primary); font-weight: 600; }
+.species-tabs { border: 0; border-radius: 999px; background: var(--tint) !important; padding: 0.3rem !important; gap: 0.2rem !important; }
+.species-tabs button { border-radius: 999px !important; text-transform: none; letter-spacing: 0; font-size: 0.95rem; }
+.species-tabs button.active { background: var(--primary) !important; color: #fff !important; }
+
+/* Cards: soft, round, no hard lines */
+.pet-card, .card, .feature, .quote, .path-card, .form-card, .panel {
+  border: 0 !important;
+  border-radius: var(--radius) !important;
+  box-shadow: var(--shadow) !important;
+  background: var(--surface);
+}
+.pet-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg) !important; }
+.pet-card-art { border-bottom: 0; aspect-ratio: 4 / 3.6; }
+.pet-card-art .photo-slot { border: 0; }
+.pet-card-body h3 { font-size: 1.6rem; }
+.status-badge { border-radius: 999px !important; background: var(--surface); color: var(--green); border: 0 !important; text-transform: none; letter-spacing: 0; font-size: 0.8rem; }
+.status-badge.reserved { color: #b26a00; }
+.tags li { border-radius: 999px; border: 0; background: var(--primary-soft); color: var(--primary-dark); text-transform: none; letter-spacing: 0; font-size: 0.8rem; }
+.heart { border-radius: 50%; background: var(--surface); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+.sticker { border-radius: 999px; border: 0; text-transform: none; letter-spacing: 0.02em; font-size: 0.8rem; transform: rotate(-5deg); }
+.sticker-new { background: var(--primary); color: #fff; }
+.sticker-green { background: var(--green); color: #fff; }
+
+/* Placeholder photo slot – soft pink with a heart */
+.photo-slot { border: 0; background: radial-gradient(circle at 30% 25%, #fff 0 8%, transparent 9%), radial-gradient(circle at 75% 70%, rgba(255,255,255,0.7) 0 12%, transparent 13%), var(--primary-soft); }
+.photo-slot-name { text-transform: none; font-weight: 600; }
+.photo-slot-note { text-transform: none; letter-spacing: 0.02em; }
+
+/* Numbered labels */
+.feature-icon, .tip-icon, .members-only-icon, .empty-icon { color: var(--primary); font-weight: 600; }
+.feature-icon {
+  display: inline-grid !important; place-items: center; width: 54px !important; height: 54px !important;
+  border-radius: 50% !important; background: var(--primary-soft) !important; font-size: 1.2rem; margin-bottom: 0.6rem;
+}
+
+/* Inner page header: soft pink wash with a rounded bottom */
+.page-header { background: linear-gradient(160deg, var(--primary-soft), var(--bg) 75%); border-bottom: 0 !important; border-radius: 0 0 48px 48px; padding: 3.2rem 0 3rem; }
+.page-header h1 { font-size: clamp(2.4rem, 5.5vw, 4rem); max-width: 20ch; }
+
+/* ---------- Home ---------- */
+.street-hero {
+  border-bottom: 0 !important;
+  background:
+    radial-gradient(circle at 88% 20%, var(--primary-soft) 0 18%, transparent 19%),
+    radial-gradient(circle at 76% 78%, var(--green-soft) 0 10%, transparent 11%),
+    var(--bg);
+  padding: 2.2rem 0 3rem;
+}
+.street-hero-top { border-bottom: 0 !important; padding-bottom: 0; }
+.wordmark { font-weight: 700; font-size: clamp(4rem, 13vw, 10.5rem); line-height: 0.92; letter-spacing: -0.02em; margin: 1.4rem 0 1.4rem; color: var(--ink); }
+.wordmark br + * , .wordmark { text-transform: none; }
+.wordmark-dot { font-size: 0.45em; vertical-align: 0.9em; animation: beat 1.6s ease-in-out infinite; display: inline-block; }
+@keyframes beat { 0%, 100% { transform: scale(1); } 15% { transform: scale(1.18); } 30% { transform: scale(1); } }
+@media (prefers-reduced-motion: reduce) { .wordmark-dot { animation: none; } }
+
+.ticker { background: var(--primary); border: 0 !important; border-radius: 0; }
+.ticker span { font-family: var(--font-head); text-transform: none; font-weight: 600; font-size: 1.25rem; color: #fff; }
+.ticker b { color: #fff; opacity: 0.85; }
+
+.look-head h2 { font-size: clamp(2.6rem, 5.5vw, 4.2rem); }
+.link-arrow { text-transform: none; letter-spacing: 0; font-size: 0.98rem; color: var(--primary-dark); }
+
+.split { gap: 1.4rem; border: 0 !important; padding: 0 max(1.5rem, calc((100% - 1200px) / 2)); margin: 1rem 0 0; }
+.split-panel { border-radius: var(--radius); border: 0 !important; padding: 2.6rem 2.4rem; }
+.split-panel strong { text-transform: none; font-weight: 600; font-size: clamp(2rem, 3.6vw, 2.9rem); line-height: 1.05; }
+.split-go { text-transform: none; letter-spacing: 0; font-size: 1rem; }
+.split-adopt { background: var(--primary); color: #fff; }
+.split-release { background: var(--green-soft); color: var(--ink); }
+[data-theme='dark'] .split-release { background: var(--green-soft); }
+.split-release .split-label { color: var(--green); }
+.split-panel:hover { background: var(--primary-dark); color: #fff; transform: translateY(-4px); }
+.split-panel:hover .split-label { color: #fff; }
+.split-panel { transition: background-color 0.25s, transform 0.25s var(--ease); }
+
+.street-quote { background: var(--primary-soft); border-radius: var(--radius); padding: 2.6rem; }
+.street-quote blockquote { text-transform: none; font-weight: 500; font-size: clamp(1.5rem, 3vw, 2.2rem); line-height: 1.3; }
+.street-quote blockquote::before { content: '♥ '; }
+.street-quote-by { text-transform: none; letter-spacing: 0; font-size: 0.95rem; }
+
+/* Footer: deep warm rose instead of black */
+.site-footer { background: #3b2a30; border-top: 0 !important; border-radius: 48px 48px 0 0; }
+.site-footer h4 { color: #ffc2cf; }
+.site-footer a:hover { color: #ffc2cf; }
+.JHyper { font-family: 'Fredoka Variable', sans-serif; color: #ffc2cf; }
+
+@media (max-width: 900px) {
+  .split { grid-template-columns: 1fr; }
+  .split-adopt { border: 0 !important; }
+}
