@@ -234,7 +234,6 @@ const pets = [
     health: { vaccinated: true, sterilised: true, microchipped: true },
     story:
       'Douni is a round, fluffy Siamese with big blue eyes and a very serious face. He was found napping in a cardboard box outside a bakery. He loves long naps, warm laps and being carried like a baby.',
-    photo: false,
     art: { fur: '#f1e6d6', accent: '#5a3f33', muzzle: '#f6efe6', ear: 'pointy', pattern: 'plain', bg: '#efe4d8', eyes: '#4a90d9' },
   },
 ]
