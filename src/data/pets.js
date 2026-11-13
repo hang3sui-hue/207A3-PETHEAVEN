@@ -218,6 +218,24 @@ const pets = [
     story:
       'Tofu is a big, round, gentle cat who just wants a soft cushion and a kind person. He has been with us the longest. Could you be the one to give him a home?',
     art: { fur: '#7d8a99', accent: '#65717e', muzzle: '#a3aebb', ear: 'pointy', pattern: 'plain', bg: '#e1e6ee', eyes: '#d99a2b' },
+  },  {
+    id: 13,
+    name: 'Douni',
+    species: 'Cat',
+    breed: 'Siamese',
+    age: 2,
+    gender: 'Male',
+    size: 'Medium',
+    colour: 'Cream with chocolate points',
+    arrived: '2026-11-12',
+    status: 'Available',
+    personality: ['Round and fluffy', 'Sleepy', 'Loves cuddles'],
+    goodWith: ['Kids', 'Cats'],
+    health: { vaccinated: true, sterilised: true, microchipped: true },
+    story:
+      'Douni is a round, fluffy Siamese with big blue eyes and a very serious face. He was found napping in a cardboard box outside a bakery. He loves long naps, warm laps and being carried like a baby.',
+    photo: false,
+    art: { fur: '#f1e6d6', accent: '#5a3f33', muzzle: '#f6efe6', ear: 'pointy', pattern: 'plain', bg: '#efe4d8', eyes: '#4a90d9' },
   },
 ]
 

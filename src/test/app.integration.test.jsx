@@ -17,9 +17,9 @@ describe('Pet Heaven SPA – integration tests', () => {
   it('2. searches the pet directory by name', async () => {
     const user = userEvent.setup()
     renderApp('/pets')
-    expect(screen.getByText(/Showing/)).toHaveTextContent('Showing 12 of 12 pets')
+    expect(screen.getByText(/Showing/)).toHaveTextContent('Showing 13 of 13 pets')
     await user.type(screen.getByPlaceholderText(/Search by name/i), 'Milo')
-    expect(screen.getByText(/Showing/)).toHaveTextContent('Showing 1 of 12 pets')
+    expect(screen.getByText(/Showing/)).toHaveTextContent('Showing 1 of 13 pets')
   })
 
   it('3. shows validation errors when the login form is empty', async () => {

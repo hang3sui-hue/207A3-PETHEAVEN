@@ -5,7 +5,7 @@ import { petPhoto } from '../utils/images'
 // If a photo is missing, a soft placeholder with the pet's name is shown instead.
 export default function PetArt({ species, name, cover = false }) {
   const pet = pets.find((p) => p.name === name)
-  if (!pet) {
+  if (!pet || pet.photo === false) {
     return (
       <div className={`photo-slot ${cover ? 'photo-slot-cover' : ''}`} role="img" aria-label={`Photo of ${name}, coming soon`}>
         <span className="photo-slot-heart" aria-hidden="true">♥</span>
