@@ -43,7 +43,7 @@ export default function Footer() {
           <address>
             {SITE.address}
             <br />
-            <a href={`tel:${SITE.phone.replace(/\s/g, '')}`}>{SITE.phone}</a>
+            <a href={`tel:${SITE.phoneDigits.replace(/\s/g, '')}`}>{SITE.phone}</a> ({SITE.phoneDigits})
             <br />
             <a href={`mailto:${SITE.adminEmail}`}>{SITE.adminEmail}</a>
           </address>

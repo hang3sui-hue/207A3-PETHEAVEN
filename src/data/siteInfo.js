@@ -5,7 +5,10 @@ export const SITE = {
   name: 'Pet Heaven',
   tagline: 'Every pet deserves a second chance.',
   adminEmail: 'admin@petheaven.org.sg',
-  phone: '+65 6738 2468',
+  // Easy-to-remember word number (same idea as my A2: 1800-AZOOM-01).
+  // The letters match a phone keypad: P=7 E=3 T=8 H=4 A=2 V=8 N=6.
+  phone: '+65 PETHEAVEN-01',
+  phoneDigits: '+65 7384 3283 601',
   whatsapp: '+65 9738 2468',
   address: '8 Lorong Kasih, Singapore 509123',
   hours: [

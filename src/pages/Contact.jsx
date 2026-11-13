@@ -46,7 +46,7 @@ export default function Contact() {
               <p>{SITE.address}</p>
               <h3>Phone</h3>
               <p>
-                <a href={`tel:${SITE.phone.replace(/\s/g, '')}`}>{SITE.phone}</a> (office)
+                <a href={`tel:${SITE.phoneDigits.replace(/\s/g, '')}`}>{SITE.phone}</a> ({SITE.phoneDigits})
                 <br />
                 <a href={`https://wa.me/${SITE.whatsapp.replace(/\D/g, '')}`} target="_blank" rel="noreferrer">
                   {SITE.whatsapp}

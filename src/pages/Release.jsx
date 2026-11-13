@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import useForm from '../hooks/useForm'
+import { SITE } from '../data/siteInfo'
 import usePageTitle from '../hooks/usePageTitle'
 import { buildMailto, saveRequest } from '../utils/requests'
 import { checkEmail, checkFutureDate, checkMinLength, checkName, checkPhone, dateFromToday, required } from '../utils/validation'
@@ -258,7 +259,7 @@ export default function Release() {
               <li>Please bring the pet's vaccination card and favourite toy on handover day.</li>
             </ul>
             <p className="soft">
-              Urgent? Call our rescue line <a href="tel:+6567382468">+65 6738 2468</a>.
+              Urgent? Call our rescue line <a href={`tel:${SITE.phoneDigits.replace(/\s/g, '')}`}>{SITE.phone}</a>.
             </p>
           </aside>
         </div>
